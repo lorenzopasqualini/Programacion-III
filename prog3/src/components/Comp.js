@@ -37,7 +37,7 @@ export default class Comp extends Component{
                 {this.state.movies === [] ?
                     <h4> Cargando </h4>:
                     this.state.movies.map((props, index) => {
-                        return <Movies key={index} poster={props.poster_path} title={props.original_title} overview={props.overview}/>
+                        return <Movies key={index} poster={props.poster_path} title={props.original_title} overview={props.overview} delete={(title)=>{this.delete(title)}} />
                     })
                 }
             </div>
