@@ -1,0 +1,37 @@
+.body, html{
+    width: 100%;
+    background-image: url('./gradient.png');
+}
+
+.movieComponent{
+    margin: 8rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.movieItem{
+    margin: 2rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+}
+
+.movieItem p{
+    text-align: justify;
+    width: 30rem;
+}
+
+.poster{
+    width: 40%;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
