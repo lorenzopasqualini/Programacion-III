@@ -3,12 +3,19 @@
     background-image: url('./gradient.png');
 }
 
-.movieComponent{
+.movieComponentVertical{
     margin: 8rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
+}
+
+.movieComponentHorizontal{
+    margin: 8rem;
+    display: flex;
+    flex-direction: column;
     align-items: flex-start;
 }
 

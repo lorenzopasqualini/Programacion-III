@@ -8,7 +8,9 @@ export default class Comp extends Component{
         super(props);
         this.state = {
             movies: [],
-            filterMovies: []
+            filterMovies: [],
+            orientacion: 'movieComponentVertical',
+            mensaje: 'Horizontal Display'
         }
     }
 
@@ -46,9 +48,25 @@ export default class Comp extends Component{
             })
         }
     }
+
+    view(){
+        if(this.state.orientacion === 'movieComponentVertical'){
+            this.setState({
+                orientacion: 'movieComponentHorizontal',
+                mensaje: 'Vertical Display'
+            })
+            } else {
+            this.setState({
+                orientacion: 'movieComponentVertical',
+                mensaje: 'Horizontal Display'
+            })
+        }
+    }
+
     render(){
         return (
-            <div className='movieComponent'>
+            <div className={this.state.orientacion}>
+                <button onClick={()=> this.view()}> {this.state.mensaje} </button>
                 <Filtro filterFunc={(name)=> this.filterFunc(name)} />
                 {this.state.movies === [] ?
                     <h4> Cargando </h4>:
