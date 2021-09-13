@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Movies from './Movies'
 import './styles.css'
+import Filtro from './Filtro';
 
 export default class Comp extends Component{
     constructor(props) {
@@ -17,7 +18,8 @@ export default class Comp extends Component{
             .then(data => {
                 console.log(data.results);
                 this.setState({
-                    movies: data.results
+                    movies: data.results,
+                    filterMovies: data.results
                 })
             })
             .catch(e => console.log(e));
@@ -31,13 +33,27 @@ export default class Comp extends Component{
         })
     }
 
+    filterFunc(name) {
+        console.log(name);
+        const arrayFiltrada = this.state.movies.filter(data => data.title.toLowerCase().includes(name.toLowerCase()));
+        if (name === "") {
+            this.setState({
+                filterMovies: this.state.movies
+            })
+        } else {
+            this.setState({
+                filterMovies: arrayFiltrada
+            })
+        }
+    }
     render(){
         return (
             <div className='movieComponent'>
+                <Filtro filterFunc={(name)=> this.filterFunc(name)} />
                 {this.state.movies === [] ?
                     <h4> Cargando </h4>:
-                    this.state.movies.map((props, index) => {
-                        return <Movies key={index} poster={props.poster_path} title={props.original_title} overview={props.overview} delete={(title)=>{this.delete(title)}} />
+                    this.state.filterMovies.map((props, index) => {
+                        return <Movies key={index} poster={props.poster_path} title={props.title} overview={props.overview} delete={(title)=>{this.delete(title)}} />
                     })
                 }
             </div>
