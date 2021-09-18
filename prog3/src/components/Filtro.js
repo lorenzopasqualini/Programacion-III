@@ -17,10 +17,12 @@ export default class Filtro extends Component {
     }
     render() {
         return (
-            <form onSubmit={(event) => this.noSubmit(event)}>
-                <label> Movie: </label>
-                <input onChange={(event) => this.inputFilter(event)} type="text" />
-            </form>
+            <div className='buscador'>
+                <form onSubmit={(event) => this.noSubmit(event)}>
+                    <label> Movie: </label>
+                    <input onChange={(event) => this.inputFilter(event)} type="text" />
+                </form>
+            </div>
         )
     }
 }

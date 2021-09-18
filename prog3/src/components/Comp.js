@@ -87,7 +87,7 @@ export default class Comp extends Component{
             <div className={this.state.orientacion}>
                 <button onClick={()=> this.view()}> {this.state.mensaje} </button>
                 <Filtro filterFunc={(name)=> this.filterFunc(name)} />
-                <button onClick={()=>this.addCards()}>Agregar mas</button>
+                <button id='agregarMas' onClick={()=>this.addCards()}>Agregar mas</button>
                 {this.state.movies === [] ?
                     <h4> Cargando </h4>:
                     this.state.filterMovies.map((props, index) => {
