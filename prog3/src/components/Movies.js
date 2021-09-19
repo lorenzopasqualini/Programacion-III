@@ -31,7 +31,7 @@ export default class Movies extends Component {
                <h5> {this.props.title} </h5>
                <p className='more' onClick={() => this.handleShow()}>{this.state.mensaje}</p>
                <p className={this.state.clase}> {this.props.overview} </p>
-               <button onClick={()=> this.props.delete(this.props.title)}> Delete </button>
+               <button onClick={()=> this.props.delete(this.props.title)} className="delete"> Delete </button>
             </div>
         )
     }

@@ -80,3 +80,30 @@ body{
     padding: 0.5rem;
     border-radius: 0.5rem;
 }
+.agregar{
+    color: #FE8CDF;
+    background: #353866;
+    border-radius: 8px;
+    width: 130px;
+    padding: 11px;
+    cursor: pointer;
+    border: none;
+  }
+.view{
+    color: #FE8CDF;
+    background: #353866;
+    border-radius: 8px;
+    width: 130px;
+    padding: 11px;
+    cursor: pointer;
+    border: none;
+}
+.delete{
+    color: white;
+    background: rgb(39, 38, 38);
+    border-radius: 8px;
+    width: 100px;
+    padding: 4px;
+    cursor: pointer;
+    border: none;
+}
