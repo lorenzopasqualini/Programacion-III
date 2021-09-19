@@ -1,16 +1,16 @@
-.body, html{
+body{
     width: 100%;
     background-image: url('./gradient.png');
+    font-family: 'Prompt', sans-serif;
 }
 
 .movieComponentVertical{
-    margin: 8rem;
+    margin: 0 8rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-
 }
 
 .movieComponentHorizontal{
@@ -32,8 +32,9 @@
 .movieItem{
     margin: 2rem;
     padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
+    color: white;
 }
 
 .movieItem p{
@@ -53,13 +54,29 @@
     display: block;
 }
 
-.footer{
-    background-color: lightgray;
-    text-align: right; 
-    margin-top: 100px;
-    align-items: center;
+.header {
+    text-align: center;
 }
-.footer h4 {
-    padding: 40px;
-    
+
+.header img{
+    width: 8rem;
+    margin: 4rem;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 2rem;
+}
+
+.footer p{
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 }

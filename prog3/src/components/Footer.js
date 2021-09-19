@@ -1,14 +1,13 @@
 import React from 'react';
 import './styles.css';
 
-function Footer(){
+export default function Footer(){
     return(
         <div className='footer'>
-                <h4> Juan Vergniaud / Lorenzo Pasqualini / Tobias Faur</h4>
-                {/* <h4> Tobias Faur </h4> */}
+            <p>Tobias Faur</p>
+            <p>Lorenzo Pasqualini</p>
+            <p>Juan Vergniaud</p>
          </div>
         
     )
 }
-
-export default Footer
