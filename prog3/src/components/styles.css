@@ -10,10 +10,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+
 }
 
 .movieComponentHorizontal{
-    margin: 8rem;
+    margin-left: 26rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -26,7 +27,6 @@
 #agregarMas{
     margin-top: 3px;
 }
-
 
 
 .movieItem{
