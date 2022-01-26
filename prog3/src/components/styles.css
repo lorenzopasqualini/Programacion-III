@@ -1,49 +1,59 @@
 body{
-    width: 100%;
-    background-image: url('./gradient.png');
+    background-image: linear-gradient(to right, peru, khaki);
     font-family: 'Prompt', sans-serif;
 }
 
-.movieComponentVertical{
-    margin: 0 8rem;
+.header{
+    text-align: center;
+}
+
+.header img{
+    width: 8rem;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.search{
+    border: none;
+    border-radius: 0.5rem;
+    width: 8rem;
+    margin: 2rem;
+}
+
+.agregar{
+    color: khaki;
+    background-color: peru;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: none;
+}
+
+.movieGrid{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
 }
-
-.movieComponentHorizontal{
-    margin-left: 26rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.buscador{
-    padding-left: 45rem;
-}
-
-#agregarMas{
-    margin-top: 3px;
-}
-
 
 .movieItem{
-    margin: 2rem;
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.2);
+    margin: 0.5rem;
+    padding: 1rem;
     border-radius: 0.5rem;
     color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
 .movieItem p{
     text-align: justify;
-    width: 30rem;
+    width: 15rem;
 }
 
 .poster{
-    width: 40%;
+    width: 50%;
 }
 
 .hide{
@@ -54,17 +64,19 @@ body{
     display: block;
 }
 
-.header {
-    text-align: center;
+.verMas{
+    cursor: pointer;
+    border: none;
 }
 
-.header img{
-    width: 8rem;
-    margin: 4rem;
-    vertical-align: middle;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 0.5rem;
-    border-radius: 0.5rem;
+.delete{
+    color: khaki;
+    background-color: peru;
+    border-radius: 8px;
+    width: 100px;
+    padding: 4px;
+    cursor: pointer;
+    border: none;
 }
 
 .footer{
@@ -75,35 +87,10 @@ body{
 }
 
 .footer p{
-    background-color: rgba(0, 0, 0, 0.2);
     color: white;
     padding: 0.5rem;
     border-radius: 0.5rem;
-}
-.agregar{
-    color: #FE8CDF;
-    background: #353866;
-    border-radius: 8px;
-    width: 130px;
-    padding: 11px;
-    cursor: pointer;
-    border: none;
-  }
-.view{
-    color: #FE8CDF;
-    background: #353866;
-    border-radius: 8px;
-    width: 130px;
-    padding: 11px;
-    cursor: pointer;
-    border: none;
-}
-.delete{
-    color: white;
-    background: rgb(39, 38, 38);
-    border-radius: 8px;
-    width: 100px;
-    padding: 4px;
-    cursor: pointer;
-    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }

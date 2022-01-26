@@ -1,8 +1,8 @@
 import React from 'react';
 import './styles.css';
-import udesa from './udesa.png'
-import tmdb from './tmdb.png'
-import dh from './dh.png'
+import udesa from './img/udesa.png'
+import tmdb from './img/tmdb.png'
+import dh from './img/dh.png'
 
 export default function Header(){
     return(

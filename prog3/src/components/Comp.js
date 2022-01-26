@@ -9,8 +9,6 @@ export default class Comp extends Component{
         this.state = {
             movies: [],
             filterMovies: [],
-            orientacion: 'movieComponentVertical',
-            mensaje: 'Horizontal Display',
             page: 2
         }
     }
@@ -49,21 +47,6 @@ export default class Comp extends Component{
             })
         }
     }
-
-    view(){
-        if(this.state.orientacion === 'movieComponentVertical'){
-            this.setState({
-                orientacion: 'movieComponentHorizontal',
-                mensaje: 'Vertical Display'
-            })
-            } else {
-            this.setState({
-                orientacion: 'movieComponentVertical',
-                mensaje: 'Horizontal Display'
-            })
-        }
-    }
-    
     
     addCards(){
         fetch(`http://api.themoviedb.org/3/movie/popular?api_key=0e3afdb0602092f1f215f06c2057dbc0&page=${this.state.page}`)
@@ -84,20 +67,20 @@ export default class Comp extends Component{
     
     render(){
         return (
-            <div className={this.state.orientacion}>
-                <button onClick={()=> this.view()} className="view"> {this.state.mensaje} </button>
-                <Filtro filterFunc={(name)=> this.filterFunc(name)} />
-                <button id='agregarMas' onClick={()=>this.addCards()} className="agregar">Agregar mas</button>
-                {this.state.movies === [] ?
-                    <h4> Cargando </h4>:
-                    this.state.filterMovies.map((props, index) => {
-                        return <Movies key={index} poster={props.poster_path} title={props.title} overview={props.overview} delete={(title)=>{this.delete(title)}} />
-                    })
-                }
+            <div>
+                <div className='d-flex justify-content-evenly'>
+                    <Filtro filterFunc={(name)=> this.filterFunc(name)} /> 
+                    <button id='agregarMas' onClick={()=>this.addCards()} className="agregar">Agregar mas</button>   
+                </div>
+                <div className='movieGrid'>
+                    {
+                        this.state.filterMovies.map((props, index) => {
+                            return <Movies key={index} poster={props.poster_path} title={props.title} overview={props.overview} delete={(title)=>{this.delete(title)}} />
+                        })
+                    }
+                </div>
             </div>
         )
     }
        
 }
-    
-

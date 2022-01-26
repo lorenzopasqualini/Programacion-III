@@ -4,7 +4,7 @@ export default class Filtro extends Component {
     constructor() {
         super();
         this.state = {
-            value: ""
+            value: ''
         }
     }
     noSubmit(event) {
@@ -18,10 +18,9 @@ export default class Filtro extends Component {
     }
     render() {
         return (
-            <div className='buscador'>
+            <div>
                 <form onSubmit={(event) => this.noSubmit(event)}>
-                    <label> Movie: </label>
-                    <input onChange={(event) => this.inputFilter(event)} type="text" />
+                    <input onChange={(event) => this.inputFilter(event)} type="text" className='search' />
                 </form>
             </div>
         )

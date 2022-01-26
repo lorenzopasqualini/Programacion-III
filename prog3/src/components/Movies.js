@@ -29,7 +29,7 @@ export default class Movies extends Component {
             <div className='movieItem'>
                <img src={`https://image.tmdb.org/t/p/w500/${this.props.poster}`} alt="img" className='poster'/>
                <h5> {this.props.title} </h5>
-               <p className='more' onClick={() => this.handleShow()}>{this.state.mensaje}</p>
+               <p className='verMas' onClick={() => this.handleShow()}>{this.state.mensaje}</p>
                <p className={this.state.clase}> {this.props.overview} </p>
                <button onClick={()=> this.props.delete(this.props.title)} className="delete"> Delete </button>
             </div>
