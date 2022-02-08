@@ -1,4 +1,4 @@
-# Proyecto de React para Programación III
+# Proyecto de React⚛️ para Programación III
 
 La implementación de la librería *front-end* **React** y conexión con una API conocida como [TheMovieDatabase](https://www.themoviedb.org) han sido los pilares detrás de nuestro proyecto, aplicación y repositorio. El objetivo era crear una *single-page application* (SPA) centrada en una UI que nos facilita React, pero dándole dinamismo y funcionalidades a través de una integración con el *end-point* de una API ajena, la cual nos brinda información relevante acerca de estrenos de películas.
 
