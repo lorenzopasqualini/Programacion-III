@@ -1,5 +1,10 @@
 # Proyecto de React⚛️ para Programación III
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/63103853/180076683-fdf8eab1-ff4c-4520-b7dd-192f1c76473b.png" width="400" />
+  <img src="https://user-images.githubusercontent.com/63103853/180078784-03f22692-6e3c-45dd-ac9e-439f8fddbd0a.png" width="350"/>
+</p>
+
 La implementación de la librería *front-end* **React** y conexión con una API conocida como [TheMovieDatabase](https://www.themoviedb.org) han sido los pilares detrás de nuestro proyecto, aplicación y repositorio. El objetivo era crear una *single-page application* (SPA) centrada en una UI que nos facilita React, pero dándole dinamismo y funcionalidades a través de una integración con el *end-point* de una API ajena, la cual nos brinda información relevante acerca de estrenos de películas.
 
 ![gif1](https://user-images.githubusercontent.com/63103853/151375939-76c014c8-00f3-4869-915c-5313a7a9be22.gif)
@@ -15,5 +20,3 @@ Por medio del **Virtual DOM**, React es capaz de rápidas actualizaciones de sus
 Si no contamos el componente principal `App.js`, la aplicación cuenta con cinco componentes: dos *stateless* y tres *stateful*. Aquellos componentes sin estado son, dado su contenido estático de texto e imágenes, el `header` y `footer`. Por el lado de los componentes con estado, `Filtro.js` se encarga del buscador de la aplicación, permitiendo al usuario encontrar una película y filtrando sobre los resultados de la API. En cambio, `Movies.js` se ocupa de renderizar cada película en calidad de ítem individual, imprimiendo información relevante como el nombre, póster y descripción. A modo de encapsular estos componentes como una suerte de *body* entre el `header` y `footer`, se creó `Comp.js`. Este mapea la primera página de resultados de películas con los ítems que provee `Movies.js`, junto con el buscador de `Filtro.js` y las funciones de borrar o agregar películas.
 
 ![gif0](https://user-images.githubusercontent.com/63103853/151375906-c059abed-e6bb-4bf4-9d9f-2e16699b92b4.gif)
-
-*Este proyecto es en colaboración con la [Universidad de San Andrés](https://udesa.edu.ar) y [Digital House](https://www.digitalhouse.com).*
